@@ -15,7 +15,6 @@ Vue3相关资料汇总：[https://vue3js.cn/](https://vue3js.cn/)
 
 Vue3互动教程，一两个小时内了解最基础的操作：[https://staging-cn.vuejs.org/tutorial/#step-1](https://staging-cn.vuejs.org/tutorial/#step-1)
 
-目前正在考虑使用组件库，还在看，目前暂定是[Vant](https://vant-contrib.gitee.io/vant/#/zh-CN/home)
+组件库定为[ElementPlus](https://element-plus.gitee.io/zh-CN/)
 
 -------------------------
-test modify
