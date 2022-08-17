@@ -1,17 +1,16 @@
 <script setup>
-import { createApp } from 'vue';
-import { NavBar } from 'vant';
-
-const app = createApp();
-app.use(NavBar);
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import navigation from './components/navigation.vue'
 </script>
 
+
 <template>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <van-nav-bar title="标题" />
-</head>
-  
+<navigation/>
+<div>
+  <p>这是首页</p>
+  <router-link to="/about">about</router-link>
+  <router-view></router-view>
+</div>
 </template>
+
