@@ -7,7 +7,7 @@
     @select="handleSelect"
   >
     
-    <el-menu-item index="0"><img src="../assets/DigGoldHome.svg"></el-menu-item>
+    <el-menu-item index="0"><img src="../assets/iconwithtext.svg"></el-menu-item>
     <el-menu-item index="1">首页</el-menu-item>
     <el-menu-item index="2">沸点</el-menu-item>
     <el-menu-item index="3">课程</el-menu-item>
