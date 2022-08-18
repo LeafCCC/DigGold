@@ -8,8 +8,7 @@ import navigation from './components/navigation.vue'
 <template>
 <navigation/>
 <div>
-  <p>这是首页</p>
-  <router-link to="/about">about</router-link>
+  <router-link to="/about">推荐</router-link>
   <router-view></router-view>
 </div>
 </template>
