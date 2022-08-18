@@ -1,7 +1,19 @@
 <template>
   <el-row :gutter="20">
-    <el-col :span="12"  :offset="4" ><div class="grid-content ep-bg-purple-dark">here is the article</div></el-col>
-    <el-col :span="4"  :offset="0"><div class="grid-content ep-bg-purple-dark">here is the ad</div></el-col>
+    <el-col :span="12"  :offset="4" >
+      <div class="grid-content ep-bg-purple-dark">
+        here is the article
+        <div>
+          <router-link to="/ArticleDemo">文章链接</router-link>
+          <router-view></router-view>
+        </div>
+      </div>
+    </el-col>
+    <el-col :span="4"  :offset="0">
+      <div class="grid-content ep-bg-purple-dark">
+        here is the ad
+      </div>
+    </el-col>
   </el-row>
 
  
