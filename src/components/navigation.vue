@@ -1,9 +1,12 @@
 <template>
   <div class="nav">
     <div class="nav_logo">
-      <a href="{{ route('home') }}">
+      <router-link to="/">
         <img class="logo-image" alt="稀土堀金" src="../assets/iconwithtext.svg">
-      </a>
+      </router-link>
+      <!-- <a href="{{ route('/') }}">
+        <img class="logo-image" alt="稀土堀金" src="../assets/iconwithtext.svg">
+      </a> -->
     </div>
     <div class="nav_menu">
 

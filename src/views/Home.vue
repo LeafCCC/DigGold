@@ -6,6 +6,5 @@
     <main>
         <Navigation />
         <About />
-        <p>这是首页</p>
     </main>
 </template>

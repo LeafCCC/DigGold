@@ -18,3 +18,7 @@ Vue3互动教程，一两个小时内了解最基础的操作：[https://staging
 组件库定为[ElementPlus](https://element-plus.gitee.io/zh-CN/)
 
 -------------------------
+## 文件说明
+
+views目录下保存所有页面，如主页`Home.vue`；文章详情页`ArticleDemo.vue`等。components目录下保存所有组件，如`Navigation.vue`等。
+-------------------------
