@@ -4,7 +4,7 @@
       <div class="grid-content ep-bg-purple-dark">
         here is the article
         <div>
-          <router-link to="/ArticleDemo">文章链接</router-link>
+          <router-link target="_blank" :to="{path:'/ArticleDemo'}">文章链接</router-link>
           <router-view></router-view>
         </div>
       </div>

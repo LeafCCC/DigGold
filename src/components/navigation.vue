@@ -4,9 +4,6 @@
       <router-link to="/">
         <img class="logo-image" alt="稀土堀金" src="../assets/iconwithtext.svg">
       </router-link>
-      <!-- <a href="{{ route('/') }}">
-        <img class="logo-image" alt="稀土堀金" src="../assets/iconwithtext.svg">
-      </a> -->
     </div>
     <div class="nav_menu">
 
