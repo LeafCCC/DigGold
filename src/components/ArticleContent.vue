@@ -7,7 +7,7 @@
         <textarea type="text" v-model="content" rows="5" ></textarea>
         <p>{{content}}</p>
         <p v-html="markdown"></p>
-        <Article1 />
+        <Article2 />
         <div>
         </div>
       </div>
@@ -24,11 +24,11 @@
 
 <script>
   import MarkdownIt from 'markdown-it'
-  import Article1 from '/articleDemo/article1.md'
+  import Article2 from '/articleDemo/article2.md'
 
   export default {
     components: {
-      Article1
+      Article2
     },
     data(){
       return{

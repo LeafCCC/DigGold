@@ -23,3 +23,9 @@ Vue3互动教程，一两个小时内了解最基础的操作：[https://staging
 views目录下保存所有页面，如主页`Home.vue`；文章详情页`ArticleDemo.vue`等。components目录下保存所有组件，如`Navigation.vue`等。
 
 -------------------------
+## 文章相关
+
+文章展示拟采用[vite-plugin-md](https://github.com/antfu/vite-plugin-md)实现；但是似乎不支持图片等较为特殊的格式。
+文章编写拟采用[markdown-it](https://markdown-it.docschina.org/api/Core.html#core-new)实现；简易教程参见[Vue中Markdown转HTML](https://www.bilibili.com/video/BV1kf4y1B7Mp)。
+
+-------------------------
