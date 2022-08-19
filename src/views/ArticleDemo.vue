@@ -1,10 +1,9 @@
-<script setup lang="ts">
-    import Navigation from '../components/Navigation.vue';
+<script setup>
+    import BasicLayout from "@/layouts/default/index.vue"
     import ArticleContent from '../components/ArticleContent.vue';
 </script>
 <template>
-    <main>
-        <Navigation />
+   <BasicLayout>
         <ArticleContent />
-    </main>
+   </BasicLayout>
 </template>

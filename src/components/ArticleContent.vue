@@ -4,6 +4,10 @@
       <div class="grid-content ep-bg-purple-dark">
         here is the article content
         <router-link to="/">返回主页</router-link>
+        <textarea type="text" v-model="content" rows="5" ></textarea>
+        <p>{{content}}</p>
+        <p v-html="markdown"></p>
+        <Article1 />
         <div>
         </div>
       </div>
@@ -17,6 +21,31 @@
 
  
 </template>
+
+<script>
+  import MarkdownIt from 'markdown-it'
+  import Article1 from '/articleDemo/article1.md'
+
+  export default {
+    components: {
+      Article1
+    },
+    data(){
+      return{
+        content: '',
+      };
+    },
+    computed:{
+      markdown(){
+        const md = new MarkdownIt();
+        const result = md.render(this.content);
+        return result;
+      },
+
+    },
+    
+}
+</script>
 
 <style lang="scss">
 .el-row {

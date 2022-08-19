@@ -1,10 +1,9 @@
 <script setup>
-import BasicLayout from "@/layouts/default/index.vue"
-
-    import ArticleContent from '@/components/ArticleContent.vue';
+    import BasicLayout from "@/layouts/default/index.vue"
+    import About from '../components/About.vue';
 </script>
 <template>
    <BasicLayout>
-       <ArticleContent />
+       <About />
    </BasicLayout>
 </template>
