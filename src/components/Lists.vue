@@ -2,11 +2,12 @@
   <el-row :gutter="20">
     <el-col :span="12"  :offset="4" >
       <div class="grid-content ep-bg-purple-dark">
-        here is the article
         <div>
           <router-link target="_blank" :to="{path:'/ArticleDemo'}">文章样例</router-link>
           <router-view></router-view>
         </div>
+
+        <ArticleItem/>
       </div>
     </el-col>
     <el-col :span="4"  :offset="0">
@@ -15,9 +16,12 @@
       </div>
     </el-col>
   </el-row>
-
- 
 </template>
+
+
+<script setup>
+import ArticleItem from './ArticleItem.vue';
+</script>
 
 <style lang="scss">
 .el-row {

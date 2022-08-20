@@ -1,9 +1,9 @@
 <script setup>
     import BasicLayout from "@/layouts/default/index.vue"
-    import About from '../components/About.vue';
+    import Lists from '../components/Lists.vue';
 </script>
 <template>
    <BasicLayout>
-       <About />
+       <Lists/>
    </BasicLayout>
 </template>
