@@ -4,15 +4,11 @@
 // import navigation from './components/navigation.vue'
 </script>
 
-
 <template>
-<!-- <navigation/> -->
-<main>
+  <!-- <navigation/> -->
+  <main>
     <!-- 默认打开主页 -->
-  <router-link to="/"></router-link>
-  <router-view></router-view>
-
-</main>
-
+    <router-link to="/"></router-link>
+    <router-view></router-view>
+  </main>
 </template>
-
