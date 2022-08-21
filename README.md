@@ -8,6 +8,35 @@ npm --version 8.15.0
 
 ---
 
+## 安装与使用
+
+- 获取项目代码
+
+```bash
+git clone https://github.com/LeafCCC/DigGold.git
+```
+
+- 安装依赖
+
+```bash
+cd DigGold
+
+pnpm install
+
+```
+
+- 运行
+
+```bash
+pnpm dev
+```
+
+- 打包
+
+```bash
+pnpm build
+```
+
 ## 说明
 
 目前根据的是 Vue3+Vite 搭建，说明一些可以看看的文件
