@@ -1,49 +1,42 @@
 <template>
   <el-row :gutter="20">
-    <el-col :span="12"  :offset="4" >
+    <el-col :span="12" :offset="4">
       <div class="grid-content ep-bg-purple-dark">
         here is the article content
         <router-link to="/">返回主页</router-link>
-        <textarea type="text" v-model="content" rows="5" ></textarea>
-        <p>{{content}}</p>
+        <textarea type="text" v-model="content" rows="5"></textarea>
+        <p>{{ content }}</p>
         <p v-html="markdown"></p>
         <Article2 />
-        <div>
-        </div>
+        <div></div>
       </div>
     </el-col>
-    <el-col :span="4"  :offset="0">
-      <div class="grid-content ep-bg-purple-dark">
-        广告位招租
-      </div>
+    <el-col :span="4" :offset="0">
+      <div class="grid-content ep-bg-purple-dark">广告位招租</div>
     </el-col>
   </el-row>
-
- 
 </template>
 
 <script>
-  import MarkdownIt from 'markdown-it'
-  import Article2 from '/articleDemo/article2.md'
+import MarkdownIt from 'markdown-it'
+import Article2 from '/articleDemo/article2.md'
 
-  export default {
-    components: {
-      Article2
-    },
-    data(){
-      return{
-        content: '',
-      };
-    },
-    computed:{
-      markdown(){
-        const md = new MarkdownIt();
-        const result = md.render(this.content);
-        return result;
-      },
-
-    },
-    
+export default {
+  components: {
+    Article2
+  },
+  data() {
+    return {
+      content: ''
+    }
+  },
+  computed: {
+    markdown() {
+      const md = new MarkdownIt()
+      const result = md.render(this.content)
+      return result
+    }
+  }
 }
 </script>
 

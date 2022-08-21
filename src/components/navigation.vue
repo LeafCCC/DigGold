@@ -1,16 +1,20 @@
 <template>
   <div class="nav">
-    <div class="nav_left">
-      <div class="nav_logo">
+    <div class="nav-left">
+      <div class="nav-logo">
         <router-link to="/">
-          <img class="logo-image" alt="稀土堀金" src="../assets/iconwithtext.svg">
+          <img
+            class="logo-image"
+            alt="稀土堀金"
+            src="../assets/iconwithtext.svg"
+          />
         </router-link>
       </div>
       <div class="left_menu">
         <el-menu
           :default-active="activeIndex"
           class="el-menu"
-          mode="horizontal"  
+          mode="horizontal"
           :ellipsis="false"
           @select="handleSelect"
         >
@@ -30,7 +34,7 @@
         <el-menu
           :default-active="activeIndex"
           class="el-menu"
-          mode="horizontal"  
+          mode="horizontal"
           :ellipsis="false"
           @select="handleSelect"
         >
@@ -45,16 +49,14 @@
         </el-menu>
       </div>
     </div>
-        
-  </div>  
-  
+  </div>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import { ref } from 'vue'
 
 const activeIndex = ref('1')
-const handleSelect = (key: string, keyPath: string[]) => {
+const handleSelect = (key, keyPath) => {
   console.log(key, keyPath)
 }
 </script>
@@ -67,21 +69,23 @@ const handleSelect = (key: string, keyPath: string[]) => {
   padding: 0 20px;
   height: 60px;
   background-color: #fff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 12%);
 }
-.nav_left {
+
+.nav-left {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.nav_logo {
+
+.nav-logo {
   display: flex;
   align-items: center;
 }
+
 .logo-image {
   display: block;
   width: 107px;
   height: 22px;
 }
-
 </style>

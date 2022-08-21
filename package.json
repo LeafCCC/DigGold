@@ -6,13 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.9",
+    "axios": "^0.27.2",
     "element-plus": "^2.2.13",
+    "happy-dom": "^6.0.4",
     "sass": "^1.54.4",
-    "scss": "^0.2.4",
     "scss-loader": "^0.0.1",
     "vant": "^3.5.4",
     "vue": "^3.2.37",
@@ -21,9 +23,31 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.3",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.3.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.16",
+    "postcss-html": "^1.5.0",
+    "postcss-less": "^6.0.0",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.10.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-less": "^1.0.4",
+    "stylelint-config-standard": "^27.0.0",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-less": "^1.0.6",
+    "stylelint-order": "^5.0.0",
     "unplugin-auto-import": "^0.11.1",
     "unplugin-vue-components": "^0.22.4",
     "vite": "^3.0.7",
     "vite-plugin-md": "^0.20.2"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx}": "eslint --cache --fix --ext",
+    "*.{css,less,scss,html}": "stylelint --fix",
+    "*.{html,vue,ts,js,json,md}": "prettier --write"
   }
 }
