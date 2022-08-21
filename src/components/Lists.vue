@@ -2,10 +2,10 @@
   <el-row :gutter="20">
     <el-col :span="12"  :offset="4" >
       <div class="grid-content ep-bg-purple-dark">
-        <div>
+        <!-- <div>
           <router-link target="_blank" :to="{path:'/ArticleDemo'}">文章样例</router-link>
           <router-view></router-view>
-        </div>
+        </div> -->
 
         <ArticleItem/>
       </div>

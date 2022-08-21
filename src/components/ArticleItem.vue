@@ -11,9 +11,24 @@
         <div class ="item-box" @click="go">
             <div class="item-title">{{title}}</div>
             <div class="item-content">{{describe}}</div>
-
-             <el-divider />
+            
+            <el-row class="icons">
+                <el-icon :size="15"><View /></el-icon>
+                 <span class="icon-number">345</span>
+                <el-icon :size="15"><Pointer/></el-icon>
+                <span class="icon-number">12</span>
+                <el-icon :size="15"><ChatRound/></el-icon>
+                <span class="icon-number">5</span>
+            </el-row>
+            <el-divider />
         </div>
+
+        <div
+            class="picture"
+            v-if="picture"
+            :style="{ backgroundImage: `url(${picture})` }"
+        ></div>
+        
     </div>
 
 </template>
@@ -34,6 +49,10 @@ const createTime = '2天前'
 const category = '前端·性能优化'
 const title = '仿掘金官网'
 const describe = '现在可以点击这里直接进入详细页了'
+const picture = '../assets/test.jpeg'
+
+
+
 
 </script>
 
@@ -86,6 +105,27 @@ const describe = '现在可以点击这里直接进入详细页了'
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
     }
+
+    .icons{
+        margin-top: 12px;
+        color: #8a929c;
+    }
+    .icon-number{
+        font-size: 13px;
+        color: #8a929c;
+        margin-left: 3px;
+        margin-right: 20px;
+    }
+
+    .picture {
+    height: 70px;
+    width: 120px;
+    right: 10px;
+    top: 10px;
+    background-color: black;
+    position: absolute;
+    background-size: cover;
+  }
 }
 
 </style>
