@@ -23,10 +23,10 @@
 </template>
 
 <script>
-  import MarkdownIt from 'markdown-it'
-  import Article2 from '/articleDemo/article2.md'
+import MarkdownIt from 'markdown-it'
+import Article2 from '/articleDemo/article2.md'
 
-  export default {
+export default {
     components: {
       Article2
     },
@@ -38,8 +38,7 @@
     computed:{
       markdown(){
         const md = new MarkdownIt();
-        const result = md.render(this.content);
-        return result;
+        return md.render(this.content);
       },
 
     },
