@@ -12,8 +12,8 @@
   "dependencies": {
     "axios": "^0.27.2",
     "element-plus": "^2.2.13",
+    "happy-dom": "^6.0.4",
     "sass": "^1.54.4",
-    "scss": "^0.2.4",
     "scss-loader": "^0.0.1",
     "vant": "^3.5.4",
     "vue": "^3.2.37",
