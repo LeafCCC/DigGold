@@ -55,7 +55,7 @@
 
       </div>
       <div class="main-inside-rightBar">
-
+          <ArticleMenu></ArticleMenu>
       </div>
     </div>
   </div>
