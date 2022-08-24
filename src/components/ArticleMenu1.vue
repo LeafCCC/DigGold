@@ -3,7 +3,7 @@
     <div class="title">目录</div>
     <ul ref="nav" class="nav">
       <li v-for="(i, index) in list" :key="index" :title="i.content" @click="jump(index)" :ref="setItemRef"
-        :class="activeIndex === index ? 'active' : ''">
+          :class="activeIndex === index ? 'active' : ''">
         <div :style="{ marginLeft: size(i.id) }">
           {{ i.content }}
         </div>
@@ -13,18 +13,15 @@
 </template>
 
 <script setup>
-// const { useListStore } = require("@/store");
-import { useListStore } from "@/store";
-// const {
-//   ref,
-//   onBeforeMount,
-//   onUnmounted,
-//   onBeforeUpdate,
-//   onMounted,
-// } = require("@vue/runtime-core");
-import { ref, onBeforeMount, onUnmounted, onBeforeUpdate, onMounted } from "@vue/runtime-core";
-// const { storeToRefs } = require("pinia");
-import { storeToRefs } from "pinia";
+const { useListStore } = require("@/store");
+const {
+  ref,
+  onBeforeMount,
+  onUnmounted,
+  onBeforeUpdate,
+  onMounted,
+} = require("@vue/runtime-core");
+const { storeToRefs } = require("pinia");
 const listArr = useListStore();
 const { list } = storeToRefs(listArr);
 let activeIndex = ref(0);
@@ -64,24 +61,24 @@ let height = ref(0); //当前滚动高度
 //鼠标滚动获取距离顶部的距离
 const scroll = () => {
   window.addEventListener(
-    "scroll",
-    (fun = () => {
+      "scroll",
+      (fun = () => {
 
-      if (timer) {
-        return;
-      }
-      timer = setTimeout(() => {
-        let _scrollTop =
-          window.scrollY ||
-          window.pageYOffset ||
-          document.documentElement.scrollTop;
-        height.value = _scrollTop + 100;
-        timer = null;
-        getHtagHeight();
-        activeScroll();
-        watchActive();
-      }, 500);
-    })
+        if (timer) {
+          return;
+        }
+        timer = setTimeout(() => {
+          let _scrollTop =
+              window.scrollY ||
+              window.pageYOffset ||
+              document.documentElement.scrollTop;
+          height.value = _scrollTop + 100;
+          timer = null;
+          getHtagHeight();
+          activeScroll();
+          watchActive();
+        }, 500);
+      })
   );
 };
 //获取nav中的dom元素
@@ -167,7 +164,7 @@ const watchActive = () => {
   oldValue = activeIndex.value;
   if(isJump){
     isJump = false
-    return 
+    return
   }
   if (offsetTop > mid && isDown) {
     nav.value.scrollBy(0, 32 * difference);
