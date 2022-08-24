@@ -11,16 +11,16 @@
         <div class ="item-box" @click="go">
             <div class="item-title">{{itemData.title}}</div>
             <div class="item-content">{{itemData.describe}}</div>
-            
+           
             <el-row class="icons">
                 <el-icon :size="15"><View /></el-icon>
-                 <span class="icon-number">345</span>
+                 <span class="icon-number"> {{itemData.view}}</span>
                 <el-icon :size="15"><Pointer/></el-icon>
-                <span class="icon-number">12</span>
+                <span class="icon-number"> {{itemData.favor}}</span>
                 <el-icon :size="15"><ChatRound/></el-icon>
-                <span class="icon-number">5</span>
+                <span class="icon-number"> {{itemData.comment}}</span>
             </el-row>
-            <el-divider />
+            <el-divider class="item-divider"/>
         </div>
 
         <div
@@ -72,6 +72,21 @@ const props = defineProps({
     describe:{
         type:String,
         default:'这里是文章详细内容'
+    },
+
+    view:{
+        type:Number,
+        default: 0
+    },
+
+    favor:{
+        type:Number,
+        default: 0
+    },
+
+    comment:{
+        type:Number,
+        default:0
     }
     }
 })
@@ -158,7 +173,13 @@ const picture = '../assets/test.jpeg'
     background-color: black;
     position: absolute;
     background-size: cover;
-  }
+    }
+
+    .item-divider{
+        height: 0px;
+        margin: 8px 0 0;
+        //上 左右 下 
+    }
 }
 
 </style>
