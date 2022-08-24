@@ -56,12 +56,7 @@
         </div>
       </div>
       <div class="container-inside-rightBar">
-<!--        <div>-->
-<!--          <p>目录</p>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--          <ArticleMenu></ArticleMenu>-->
-<!--        </div>-->
+          <ArticleMenu></ArticleMenu>
       </div>
     </div>
   </div>
@@ -124,7 +119,6 @@
     .container-inside-rightBar {
       width: 20%;
       border-radius: 2px;
-      background: beige;
     }
   }
 
