@@ -4,6 +4,7 @@ specifiers:
   '@element-plus/icons-vue': ^2.0.9
   '@kangc/v-md-editor': ^2.3.15
   '@vitejs/plugin-vue': ^3.0.3
+  '@vue/runtime-core': ^3.2.37
   axios: ^0.27.2
   element-plus: ^2.2.13
   eslint: ^8.22.0
@@ -42,6 +43,7 @@ specifiers:
 dependencies:
   '@element-plus/icons-vue': registry.npmmirror.com/@element-plus/icons-vue/2.0.9_vue@3.2.37
   '@kangc/v-md-editor': registry.npmmirror.com/@kangc/v-md-editor/2.3.15_vue@3.2.37
+  '@vue/runtime-core': registry.npmmirror.com/@vue/runtime-core/3.2.37
   axios: registry.npmmirror.com/axios/0.27.2
   element-plus: registry.npmmirror.com/element-plus/2.2.14_vue@3.2.37
   happy-dom: registry.npmmirror.com/happy-dom/6.0.4
