@@ -11,8 +11,7 @@
     </el-col>
     <el-col :span="4" :offset="0">
       <div class="grid-content ep-bg-purple-dark">
-        <Ad />
-        <Ad />
+        <Ad v-for="a in adData" :key="a.id" :url="a.url" :picture="a.picture" />
       </div>
     </el-col>
   </el-row>
@@ -21,8 +20,10 @@
 <script setup>
 import ArticleItem from './ArticleItem.vue'
 import test from '@/assets/json/test.json'
+import adRes from '@/assets/json/homead.json'
 import Ad from '@/components/ad/index.vue'
 const data = test.data
+const adData = adRes.data
 </script>
 
 <style lang="scss">

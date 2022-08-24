@@ -1,15 +1,8 @@
 <template>
   <div className="sidebar-block banner-block">
     <div className="banner">
-      <a
-        href="https://juejin.cn/book/7127092198096502822?utm_source=webcebian"
-        target="_blank"
-      >
-        <img
-          src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/addd03fc12614209b6e0c81669f17703~tplv-k3u1fbpfcp-watermark.image?"
-          width="240"
-          height="200"
-          className="banner-image"
+      <a :href="url" target="_blank">
+        <img :src="picture" width="240" height="200" className="banner-image"
       /></a>
       <div className="ctrl-box">
         <i className="ion-close-round close-btn"></i>
@@ -89,3 +82,15 @@
   }
 }
 </style>
+<script setup>
+defineProps({
+  url: {
+    type: String,
+    default: ''
+  },
+  picture: {
+    type: String,
+    default: ''
+  }
+})
+</script>
