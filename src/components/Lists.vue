@@ -26,12 +26,6 @@ const data = test.data
 </script>
 
 <style lang="scss">
-.el-row {
-  margin-bottom: 20px;
-}
-.el-col {
-  border-radius: 4px;
-}
 
 .grid-content {
   border-radius: 4px;
