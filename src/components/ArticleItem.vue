@@ -1,16 +1,16 @@
 <template>
     <div class="list">
         <div class="item-name1">
-            <span>{{author}}</span>
+            <span>{{itemData.author}}</span>
             <el-divider direction="vertical"/>
-            <span class="item-name2">{{createTime}}</span>
+            <span class="item-name2">{{itemData.createTime}}</span>
             <el-divider direction="vertical"/>
-            <span class="item-name2">{{category}}</span>
+            <span class="item-name2">{{itemData.category}}</span>
         </div>
 
         <div class ="item-box" @click="go">
-            <div class="item-title">{{title}}</div>
-            <div class="item-content">{{describe}}</div>
+            <div class="item-title">{{itemData.title}}</div>
+            <div class="item-content">{{itemData.describe}}</div>
             
             <el-row class="icons">
                 <el-icon :size="15"><View /></el-icon>
@@ -44,11 +44,44 @@ const newpage = router.resolve({
 function go(){
     window.open(newpage.href, '_blank')
 }
-const author = 'Alice'
-const createTime = '2天前'
-const category = '前端·性能优化'
-const title = '仿掘金官网'
-const describe = '现在可以点击这里直接进入详细页了'
+
+//定义传入子组件的数据
+//如果出现的是默认值 说明传送失败啦
+const props = defineProps({
+    itemData:{
+    author:{
+        type: String,
+        default: 'Alice'
+    },
+
+    createTime:{
+        type: String,
+        default: '1分钟前'
+    },
+
+    category:{
+        type: String,
+        default: '综合',
+    },
+
+    title:{
+        type:String,
+        default:'仿掘金官网'
+    },
+
+    describe:{
+        type:String,
+        default:'这里是文章详细内容'
+    }
+    }
+})
+
+
+// const author = 'Alice'
+// const createTime = '2天前'
+// const category = '前端·性能优化'
+// const title = '仿掘金官网'
+// const describe = '现在可以点击这里直接进入详细页了'
 const picture = '../assets/test.jpeg'
 
 

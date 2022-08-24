@@ -6,8 +6,7 @@
           <router-link target="_blank" :to="{path:'/ArticleDemo'}">文章样例</router-link>
           <router-view></router-view>
         </div> -->
-
-        <ArticleItem/>
+        <ArticleItem  v-for="i in data" :itemData = "i" />
       </div>
     </el-col>
     <el-col :span="4"  :offset="0">
@@ -21,6 +20,9 @@
 
 <script setup>
 import ArticleItem from './ArticleItem.vue';
+import test from '@/assets/json/test.json'
+
+const data = test.data
 </script>
 
 <style lang="scss">
