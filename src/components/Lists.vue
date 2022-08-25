@@ -19,13 +19,13 @@
 
 <script setup>
 import ArticleItem from './ArticleItem.vue'
-import test from '@/assets/json/test.json'
+import dataItems from '@/assets/json/articleItems.json'
 import adRes from '@/assets/json/homead.json'
 import Ad from '@/components/ad/index.vue'
 import { onMounted,reactive } from 'vue'
 const data = reactive({now:7})
-data.content = test.data.slice(0,7)
-const maxLen = test.data.length
+data.content = dataItems.data.slice(0,7)
+const maxLen = dataItems.data.length
 const adData = adRes.data
 
 // const num = ref(0)
@@ -44,9 +44,9 @@ const scrollHandle = () => {
       // console.log("内容高度",scrollHeight);
       // 检测到达底部触发事件
       if (data.now < maxLen && scrollTop + clientHeight >= scrollHeight) {
-          console.log("到达底部拉")
+          // console.log("到达底部啦")
           data.now = data.now + 7
-          data.content = test.data.slice(0, data.now)
+          data.content = dataItems.data.slice(0, data.now)
        }
 
 }

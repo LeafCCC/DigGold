@@ -23,11 +23,12 @@
       <el-divider class="item-divider" />
     </div>
 
-    <div class="picture"></div>
+    <img class="picture" :src="getImageUrl(itemData.imgUrl)"/>
   </div>
 </template>
 
 <script setup>
+
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -36,6 +37,10 @@ const newpage = router.resolve({
 })
 function go() {
   window.open(newpage.href, '_blank')
+}
+
+function getImageUrl(name) {
+  return new URL(`../assets/img/${name}`, import.meta.url).href
 }
 
 //定义传入子组件的数据
@@ -80,15 +85,15 @@ defineProps({
     comment: {
       type: Number,
       default: 0
+    },
+
+    imgUrl:{
+      type: String,
+      default: "test.jpeg"
     }
   }
 })
 
-// const author = 'Alice'
-// const createTime = '2天前'
-// const category = '前端·性能优化'
-// const title = '仿掘金官网'
-// const describe = '现在可以点击这里直接进入详细页了'
 </script>
 
 <style lang="scss" scoped>
@@ -159,7 +164,6 @@ defineProps({
     background-color: black;
     position: absolute;
     background-size: cover;
-    background: url('@/assets/test.jpeg') no-repeat;
     background-size: contain;
   }
 
