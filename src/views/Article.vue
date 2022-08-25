@@ -1,6 +1,6 @@
 <script setup>
     import BasicLayout from "@/layouts/default/index.vue"
-    import ArticleContent from '../components/ArticleContent1.vue';
+    import ArticleContent from '../components/ArticleContent.vue';
     import ArticleLeftBar from "@/components/ArticleLeftBar.vue";
     import theData from '@/assets/json/articleItems.json'
     import { useRoute } from "vue-router";
@@ -25,7 +25,7 @@
           <div class="author">
             <div class="author-left">
               <div class="avatar">
-                <img class="avatar-img" src="\src\assets\img\12.jpeg"/>
+                <img class="avatar-img" src="\src\assets\head.image"/>
               </div>
               <div>
                 <span class="author-name">{{ article.author }}</span>
