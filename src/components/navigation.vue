@@ -70,6 +70,7 @@ const handleSelect = (key, keyPath) => {
   height: 60px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgb(0 0 0 / 12%);
+  margin-bottom: 10px;
 }
 
 .nav-left {
@@ -81,6 +82,7 @@ const handleSelect = (key, keyPath) => {
 .nav-logo {
   display: flex;
   align-items: center;
+  margin-right: 25px;
 }
 
 .logo-image {
