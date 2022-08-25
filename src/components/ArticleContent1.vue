@@ -22,19 +22,8 @@
 </template>
 
 <script>
-import article from "../../public/detailText.txt?raw";
-const text = article;
-const articleinfo = {
-      title: '文章标题',
-      author: {
-        name: '作者名称',
-        avatar_url: 'https://avatars0.githubusercontent.com/u/20455301?s=460&v=4',
-        is_follow: true,
-      },
-      content: '文章内容',
-      createTime: '创建时间',
-    };
-    
+import article from "../../public/article.md?raw";
+const text = article;    
 export default {
   data() {
     return {
@@ -121,5 +110,24 @@ export default {
     background-color: white;
   }
 
+}
+
+::-webkit-scrollbar{
+  width:6px;
+  height:16px;
+}
+/*定义滚动条轨道内阴影+圆角*/
+
+::-webkit-scrollbar-track{
+  border-radius:10px;
+}
+
+/*定义滑块内阴影+圆角*/
+
+::-webkit-scrollbar-thumb{
+  border-radius:5px;
+  -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);
+  box-shadow: inset;
+  background-color: #8A919F;
 }
 </style>

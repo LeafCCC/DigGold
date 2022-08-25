@@ -37,6 +37,8 @@ import {
   .container {
     display: flex;    
     flex-direction: column;
+    position: sticky;
+      top: 20px;
   }
   .icons {
     margin:10px 5px 15px 20px;
