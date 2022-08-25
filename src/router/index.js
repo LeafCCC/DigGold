@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/home.vue'
+import Home from '@/views/home/home.vue'
 
 //路由数组
 const routes = [
