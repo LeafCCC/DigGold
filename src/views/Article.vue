@@ -89,11 +89,13 @@
             .author-name {
               color: #515767;
               font-size: 16px;
+              margin-left: 10px;
             }
             .create-time {
               color: #8A919F;
               font-size: 14px;
               margin-top: 7px;
+              margin-left: 10px;
             }
           }
           .action{
