@@ -8,7 +8,7 @@
       <span class="item-name2">{{ itemData.category }}</span>
     </div>
 
-    <div class="item-box" @click="go">
+    <div class="item-box" @click="go(itemData.id)">
       <div class="item-title">{{ itemData.title }}</div>
       <div class="item-content">{{ itemData.describe }}</div>
 
@@ -32,10 +32,11 @@
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const newpage = router.resolve({
-  path: '/articleDemo' // 跳转的页面路由
-})
-function go() {
+
+function go(id) {
+  const newpage = router.resolve({
+  path: '/articleDemo/'+id // 跳转的页面路由
+  })
   window.open(newpage.href, '_blank')
 }
 

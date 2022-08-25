@@ -6,7 +6,7 @@
           <router-link target="_blank" :to="{path:'/ArticleDemo'}">文章样例</router-link>
           <router-view></router-view>
         </div> -->
-        <ArticleItem v-for="(i, index) in data.content" :key="index" :itemData="i" />
+        <HomeItem v-for="(i, index) in data.content" :key="index" :itemData="i" />
       </div>
     </el-col>
     <el-col :span="4" :offset="0">
@@ -18,8 +18,10 @@
 </template>
 
 <script setup>
-import ArticleItem from './ArticleItem.vue'
+import HomeItem from './HomeItem.vue'
 import dataItems from '@/assets/json/articleItems.json'
+// import dataItems from '@/assets/json/test.json'
+
 import adRes from '@/assets/json/homead.json'
 import Ad from '@/components/ad/index.vue'
 import { onMounted,reactive } from 'vue'

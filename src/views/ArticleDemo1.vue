@@ -3,15 +3,20 @@
     import ArticleContent from '../components/ArticleContent1.vue';
     // import ArticleMenu from '../components/ArticleMenu.vue';
     import ArticleLeftBar from "@/components/ArticleLeftBar.vue";
+    import theData from '@/assets/json/articleItems.json'
+    import { useRoute } from "vue-router";
 
-    let article = {
-      title: '文章标题',
-      author: {
-        name: '作者名称',
-        is_follow: true,
-      },
-      createTime: '创建时间',
-    };
+    const route = useRoute()
+    // console.log(route.params.id)
+    const article = theData.data[route.params.id-1]
+    // let article = {
+    //   title: '文章标题',
+    //   author: {
+    //     name: '作者名称',
+    //     is_follow: true,
+    //   },
+    //   createTime: '创建时间',
+    // };
 
 </script>
 <template>
@@ -36,7 +41,7 @@
                     height="50">
               </div>
               <div>
-                <span class="author-name">{{ article.author.name }}</span>
+                <span class="author-name">{{ article.author }}</span>
                 <span class="create-time">{{ article.createTime }}</span>
               </div>
             </div>
