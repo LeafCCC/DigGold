@@ -30,6 +30,7 @@ export default {
         return { id: data[1], content: data[2] };
       });
       list.$patch({ list: arr });
+      // console.log(list.list);
     };
     onMounted(() => {
       getData();

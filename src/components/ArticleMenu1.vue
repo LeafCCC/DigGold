@@ -68,11 +68,13 @@ const scroll = () => {
           return;
         }
         timer = setTimeout(() => {
+          // 获取页面滚动的高度
           let _scrollTop =
               window.scrollY ||
               window.pageYOffset ||
               document.documentElement.scrollTop;
           height.value = _scrollTop + 100;
+          console.log(222222222222222222222222222222222);
           timer = null;
           getHtagHeight();
           activeScroll();

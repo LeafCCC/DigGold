@@ -27,6 +27,12 @@ import { ref, onBeforeMount, onUnmounted, onBeforeUpdate, onMounted } from "@vue
 import { storeToRefs } from "pinia";
 const listArr = useListStore();
 const { list } = storeToRefs(listArr);
+// console.log(list)
+// 遍历list，就是 2.1 XXXX, 4这样的
+// list.value.forEach((item, index) => {
+//   console.log(item.content, index);
+// });
+
 let activeIndex = ref(0);
 
 //动态计算缩进大小
@@ -48,7 +54,7 @@ const jump = (index) => {
 };
 
 const hTagHeight = ref([]);
-//获取h标签距离页面顶部的距离
+//获取h标签距离页面顶部的距离,就是所有标题的绝对高度,一次性拿到
 const getHtagHeight = () => {
   let tag = document.querySelectorAll(".jump-site");
   let arr = [];
@@ -56,11 +62,12 @@ const getHtagHeight = () => {
     arr.push(tag[i].offsetTop);
   }
   hTagHeight.value = arr;
+  // console.log(hTagHeight.value)
 };
 
 let timer;
 let fun;
-let height = ref(0); //当前滚动高度
+let height = ref(0); //当前滚动高度，初始值为0
 //鼠标滚动获取距离顶部的距离
 const scroll = () => {
   window.addEventListener(
@@ -74,9 +81,10 @@ const scroll = () => {
         let _scrollTop =
           window.scrollY ||
           window.pageYOffset ||
-          document.documentElement.scrollTop;
-        height.value = _scrollTop + 100;
+          document.documentElement.scrollTop; // 固定写法，防止获取不到
+        height.value = _scrollTop + 100; // 应该是鼠标滚轮滚动一下的固定值
         timer = null;
+        console.log(height.value);
         getHtagHeight();
         activeScroll();
         watchActive();
@@ -89,8 +97,12 @@ let itemRefs = [];
 const setItemRef = (el) => {
   if (el) {
     itemRefs.push(el);
+    console.log(itemRefs);// 等于是这个数组记录了那个index是activate的
   }
 };
+// // 输出itemRefs
+// console.log(itemRefs)
+
 onBeforeMount(() => {
   scroll();
 });
@@ -103,12 +115,12 @@ onBeforeUpdate(() => {
 //激活样式跟随页面滚动
 const activeScroll = () => {
   let arr = hTagHeight.value;
-  if (arr[0] > height.value) return;
+  if (arr[0] > height.value) return; // 如果滚动高度小于第一个标题的高度，则不激活
   else if (arr[arr.length - 1] < height.value) {
-    activeIndex.value = arr.length - 1;
+    activeIndex.value = arr.length - 1; // 如果滚动高度大于最后一个标题的高度，则激活最后一个标题
   }
   for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] < height.value && arr[i + 1] > height.value) {
+    if (arr[i] < height.value && arr[i + 1] > height.value) { // 如果滚动高度大于等于第i个标题的高度，并且小于第i+1个标题的高度，则激活第i个标题
       return (activeIndex.value = i);
     }
   }
@@ -155,27 +167,29 @@ const mouseWheel = () => {
 
 //监视目录滚动
 const nav = ref(null);
-let oldValue = 10;
+let oldValue = 10; // 这个值就是可以随便给的
 const watchActive = () => {
   if (oldValue === activeIndex.value) {
     return;
   }
   let difference = activeIndex.value - oldValue //差值
   let mid = nav.value.clientHeight / 2;  //滚动元素父元素的高度的一半
+  // console.log(nav.value.clientHeight) // 500,对应nav的height
   let offsetTop = itemRefs[activeIndex.value].offsetTop; //当前激活元素相对于父元素顶部的距离
-  console.log(activeIndex.value);
+  // console.log(offsetTop) // 对应激活元素的offsetTop
+  // console.log(activeIndex.value);
   oldValue = activeIndex.value;
-  if(isJump){
+  if(isJump){ // 应该是区分是用户点击目录跳转的（true）还是滚动的（false）
     isJump = false
     return 
   }
   if (offsetTop > mid && isDown) {
-    nav.value.scrollBy(0, 32 * difference);
+    nav.value.scrollBy(0, 32 * difference);  // 目录的每一项高度是32px
   } else if (offsetTop > mid && !isDown) {
     nav.value.scrollBy(0, 32 * difference);
   }
-  if (activeIndex.value === 1) {
-    console.log('1122');
+  if (activeIndex.value === 1) { // 这个应该是重置一下防止有偏差
+    // console.log('1122');
     nav.value.scrollTo({
       top: 0
     })
