@@ -21,7 +21,7 @@
 import HomeItem from './HomeItem.vue'
 import dataItems from '@/assets/json/articleItems.json'
 
-import adRes from '@/assets/json/homead.json'
+import adRes from '@/assets/json/homeAd.json'
 import Ad from '@/components/ad/index.vue'
 import { onMounted, reactive } from 'vue'
 const data = reactive({ now: 7 })
