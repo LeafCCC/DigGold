@@ -11,6 +11,7 @@
     </el-col>
     <el-col :span="4" :offset="0">
       <div class="grid-content ep-bg-purple-dark">
+        <SigninTip />
         <Ad v-for="a in adData" :key="a.id" :url="a.url" :picture="a.picture" />
       </div>
     </el-col>
@@ -23,6 +24,7 @@ import dataItems from '@/assets/json/articleItems.json'
 
 import adRes from '@/assets/json/homeAd.json'
 import Ad from '@/components/ad/index.vue'
+import SigninTip from '@/components/signin/signin-tip.vue'
 import { onMounted, reactive } from 'vue'
 const data = reactive({ now: 7 })
 data.content = dataItems.data.slice(0, 7)
@@ -49,6 +51,6 @@ const scrollHandle = () => {
 .grid-content {
   border-radius: 4px;
   min-height: 1000px;
-  background-color: white;
+  overflow: hidden;
 }
 </style>
