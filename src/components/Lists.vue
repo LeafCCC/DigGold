@@ -2,10 +2,6 @@
   <el-row :gutter="20">
     <el-col :span="12" :offset="4">
       <div class="grid-content ep-bg-purple-dark">
-        <!-- <div>
-          <router-link target="_blank" :to="{path:'/ArticleDemo'}">文章样例</router-link>
-          <router-view></router-view>
-        </div> -->
         <HomeItem v-for="(i, index) in data.content" :key="index" :itemData="i" />
       </div>
     </el-col>

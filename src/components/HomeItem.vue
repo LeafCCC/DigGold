@@ -35,7 +35,7 @@ const router = useRouter()
 
 function go(id) {
   const newpage = router.resolve({
-  path: '/articleDemo/'+id // 跳转的页面路由
+  path: '/article/'+id // 跳转的页面路由
   })
   window.open(newpage.href, '_blank')
 }

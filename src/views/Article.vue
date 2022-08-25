@@ -1,22 +1,12 @@
 <script setup>
     import BasicLayout from "@/layouts/default/index.vue"
-    import ArticleContent from '../components/ArticleContent1.vue';
-    // import ArticleMenu from '../components/ArticleMenu.vue';
+    import ArticleContent from '../components/ArticleContent.vue';
     import ArticleLeftBar from "@/components/ArticleLeftBar.vue";
     import theData from '@/assets/json/articleItems.json'
     import { useRoute } from "vue-router";
 
     const route = useRoute()
-    // console.log(route.params.id)
     const article = theData.data[route.params.id-1]
-    // let article = {
-    //   title: '文章标题',
-    //   author: {
-    //     name: '作者名称',
-    //     is_follow: true,
-    //   },
-    //   createTime: '创建时间',
-    // };
 
 </script>
 <template>
@@ -35,10 +25,7 @@
           <div class="author">
             <div class="author-left">
               <div class="avatar">
-                <img
-                    src="https://avatars0.githubusercontent.com/u/20455301?s=460&v=4"
-                    width="50"
-                    height="50">
+                <img class="avatar-img" src="\src\assets\img\12.jpeg"/>
               </div>
               <div>
                 <span class="author-name">{{ article.author }}</span>
@@ -83,7 +70,6 @@
       .container-inside-article-info {
         display: flex;
         flex-direction: column;
-        // background-color: white;
         .author {
           display: flex;
           justify-content: left;
@@ -91,6 +77,12 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
+            .avatar-img {
+              width: 50px;
+              height: 50px;
+              object-fit: cover;
+              border-radius: 50%;
+            }
             span {
               display: block;
             }
