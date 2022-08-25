@@ -11,7 +11,7 @@ const routes = [
   {
     path: '/articleDemo',
     name: 'articleDemo',
-    component: () => import('../views/ArticleDemo.vue')
+    component: () => import('../views/ArticleDemo1.vue')
   }
 ]
 

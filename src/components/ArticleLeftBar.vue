@@ -35,7 +35,7 @@ import {
 
 <style scoped>
   .container {
-    display: flex;
+    display: flex;    
     flex-direction: column;
   }
   .icons {

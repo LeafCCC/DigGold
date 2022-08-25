@@ -1,7 +1,7 @@
 <script setup>
     import BasicLayout from "@/layouts/default/index.vue"
-    import ArticleContent from '../components/ArticleContent.vue';
-    import ArticleMenu from '../components/ArticleMenu.vue';
+    import ArticleContent from '../components/ArticleContent1.vue';
+    // import ArticleMenu from '../components/ArticleMenu.vue';
     import ArticleLeftBar from "@/components/ArticleLeftBar.vue";
 
     const article = {
@@ -43,7 +43,7 @@
               </div>
             </div>
 
-            <div>
+            <div class="action">
               <el-button type="primary" plain class="action">+关注</el-button>
             </div>
 
@@ -55,9 +55,7 @@
           <ArticleContent></ArticleContent>
         </div>
       </div>
-      <div class="container-inside-rightBar">
-          <ArticleMenu></ArticleMenu>
-      </div>
+
     </div>
   </div>
 
@@ -73,18 +71,19 @@
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     .container-inside-article {
-      width: 60%;
+      width: 80%;
       background: white;
       border-radius: 2px;
       padding: 24px;
       .container-inside-article-info {
         display: flex;
         flex-direction: column;
+        // background-color: white;
         .author {
           display: flex;
-          justify-content: space-between;
+          justify-content: left;
           .author-left {
             display: flex;
             flex-direction: row;
@@ -102,9 +101,8 @@
               margin-top: 7px;
             }
           }
-
-          .button {
-            margin-top: 100px;
+          .action{
+            margin-left: 200px;
           }
         }
       }

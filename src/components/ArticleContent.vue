@@ -15,7 +15,7 @@ export default {
         "application/json;charset=UTF-8";
       // let res = await axios.get("http://182.61.29.159:3334/detailText.txt");
       // 改成获取本地文件
-      let res = await axios.get("../../articleDemo/detailText.txt");
+      let res = await axios.get("../../public/detailText.txt");
       getList(res.data);
     }
     const getList = (data) => {
