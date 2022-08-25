@@ -9,29 +9,19 @@
         />
       </div>
     </el-col>
-    <el-col :span="4" :offset="0">
-      <div class="grid-content ep-bg-purple-dark">
-        <SigninTip />
-        <Ad v-for="a in adData" :key="a.id" :url="a.url" :picture="a.picture" />
-        <QrcodeDownload />
-      </div>
-    </el-col>
+    <el-col :span="4" :offset="0"> <Sidebar /></el-col>
   </el-row>
 </template>
 
 <script setup>
 import HomeItem from './HomeItem.vue'
 import dataItems from '@/assets/json/articleItems.json'
-
-import adRes from '@/assets/json/homeAd.json'
-import Ad from '@/components/ad/index.vue'
-import SigninTip from '@/components/signin/signin-tip.vue'
-import QrcodeDownload from '@/components/qrcode/qrcode-download.vue'
+import Sidebar from '@/views/home/sidebar.vue'
 import { onMounted, reactive } from 'vue'
 const data = reactive({ now: 7 })
 data.content = dataItems.data.slice(0, 7)
 const maxLen = dataItems.data.length
-const adData = adRes.data
+
 onMounted(() => {
   // 监听滚动条位置并触发事件
   window.addEventListener('scroll', scrollHandle)
