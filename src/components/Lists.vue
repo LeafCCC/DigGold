@@ -2,7 +2,11 @@
   <el-row :gutter="20">
     <el-col :span="12" :offset="4">
       <div class="grid-content ep-bg-purple-dark">
-        <HomeItem v-for="(i, index) in data.content" :key="index" :itemData="i" />
+        <HomeItem
+          v-for="(i, index) in data.content"
+          :key="index"
+          :itemData="i"
+        />
       </div>
     </el-col>
     <el-col :span="4" :offset="0">
@@ -16,39 +20,29 @@
 <script setup>
 import HomeItem from './HomeItem.vue'
 import dataItems from '@/assets/json/articleItems.json'
-// import dataItems from '@/assets/json/test.json'
 
 import adRes from '@/assets/json/homead.json'
 import Ad from '@/components/ad/index.vue'
-import { onMounted,reactive } from 'vue'
-const data = reactive({now:7})
-data.content = dataItems.data.slice(0,7)
+import { onMounted, reactive } from 'vue'
+const data = reactive({ now: 7 })
+data.content = dataItems.data.slice(0, 7)
 const maxLen = dataItems.data.length
 const adData = adRes.data
-
-// const num = ref(0)
 onMounted(() => {
-     // 监听滚动条位置并触发事件
-     window.addEventListener('scroll', scrollHandle, true)
-     })
+  // 监听滚动条位置并触发事件
+  window.addEventListener('scroll', scrollHandle)
+})
 
- //检测是否到达底部 并加载更多data
+//检测是否到达底部 并加载更多data
 const scrollHandle = () => {
-      let scrollTop = document.documentElement.scrollTop;//滚动高度
-      let clientHeight = document.documentElement.clientHeight;//可视高度
-      let scrollHeight = document.documentElement.scrollHeight;//内容高度
-      // console.log("滚动高度",scrollTop);
-      // console.log("可视高度",clientHeight);
-      // console.log("内容高度",scrollHeight);
-      // 检测到达底部触发事件
-      if (data.now < maxLen && scrollTop + clientHeight >= scrollHeight) {
-          // console.log("到达底部啦")
-          data.now = data.now + 7
-          data.content = dataItems.data.slice(0, data.now)
-       }
-
+  let scrollTop = document.documentElement.scrollTop //滚动高度
+  let clientHeight = document.documentElement.clientHeight //可视高度
+  let scrollHeight = document.documentElement.scrollHeight //内容高度
+  if (data.now < maxLen && scrollTop + clientHeight >= scrollHeight - 100) {
+    data.now += 7
+    data.content = dataItems.data.slice(0, data.now)
+  }
 }
-
 </script>
 
 <style lang="scss">
