@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import article from "../../public/article.md?raw";
+import article from "/src/assets/article/article1.md?raw";
 const text = article;    
 export default {
   data() {

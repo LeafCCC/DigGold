@@ -4,14 +4,12 @@
     // import ArticleMenu from '../components/ArticleMenu.vue';
     import ArticleLeftBar from "@/components/ArticleLeftBar.vue";
 
-    const article = {
+    let article = {
       title: '文章标题',
       author: {
         name: '作者名称',
-        avatar_url: 'https://avatars0.githubusercontent.com/u/20455301?s=460&v=4',
         is_follow: true,
       },
-      content: '文章内容',
       createTime: '创建时间',
     };
 
