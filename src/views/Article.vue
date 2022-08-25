@@ -1,6 +1,6 @@
 <script setup>
     import BasicLayout from "@/layouts/default/index.vue"
-    import ArticleContent from '../components/ArticleContent.vue';
+    import ArticleContent from '../components/ArticleContent1.vue';
     import ArticleLeftBar from "@/components/ArticleLeftBar.vue";
     import theData from '@/assets/json/articleItems.json'
     import { useRoute } from "vue-router";
