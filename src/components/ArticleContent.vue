@@ -66,7 +66,7 @@ export default {
               document.documentElement.scrollTop; //获取滚动高度,兼容性写法
             height.value = _scrollTop + 100; // 100是鼠标滚轮滚动一次的距离
             timer = null;
-            // console.log(height.value);
+            console.log(height.value);
             getHtagHeight();
             activeScroll();
             // watchActive();
@@ -79,7 +79,7 @@ export default {
     //激活样式跟随页面滚动
     const activeScroll = () => {
       let arr = hTagHeight.value;
-      if (arr[0] > height.value) return;  // 如果当前滚动高度小于第一个标题的高度，则返回
+      if (arr[0] > height.value) activeIndex.value = 0;  // 如果当前滚动高度小于第一个标题的高度，则返回
       else if (arr[arr.length - 1] < height.value) {  // 如果当前滚动高度大于最后一个标题的高度，则激活最后一个标题
         activeIndex.value = arr.length - 1; 
       }
