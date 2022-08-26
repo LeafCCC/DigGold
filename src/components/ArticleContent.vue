@@ -42,6 +42,7 @@ export default {
     let hTagHeight = ref([]);
     let activeIndex = ref(0);
 
+    // 需要从data中获取数据
     const datab = getCurrentInstance();
     async function getHtagHeight(){
     	hTagHeight=datab.data.hTagHeight;
@@ -52,7 +53,7 @@ export default {
 
     let timer;
     let fun; 
-    let height = ref(0); //当前滚动高度
+    let height = ref(0); //当前滚动高度，初始值为0
     //鼠标滚动获取距离顶部的距离
     const scroll = () => {
       window.addEventListener(
@@ -66,8 +67,8 @@ export default {
             let _scrollTop =
               window.scrollY ||
               window.pageYOffset ||
-              document.documentElement.scrollTop;
-            height.value = _scrollTop + 100;
+              document.documentElement.scrollTop; //获取滚动高度,兼容性写法
+            height.value = _scrollTop + 100; // 100是鼠标滚轮滚动一次的距离
             timer = null;
             // console.log(height.value);
             getHtagHeight();
@@ -82,12 +83,12 @@ export default {
     //激活样式跟随页面滚动
     const activeScroll = () => {
       let arr = hTagHeight.value;
-      if (arr[0] > height.value) return;
-      else if (arr[arr.length - 1] < height.value) {
-        activeIndex.value = arr.length - 1;
+      if (arr[0] > height.value) return;  // 如果当前滚动高度小于第一个标题的高度，则返回
+      else if (arr[arr.length - 1] < height.value) {  // 如果当前滚动高度大于最后一个标题的高度，则激活最后一个标题
+        activeIndex.value = arr.length - 1; 
       }
       for (let i = 0; i < arr.length - 1; i++) {
-        if (arr[i] < height.value && arr[i + 1] > height.value) {
+        if (arr[i] < height.value && arr[i + 1] > height.value) { // 如果当前滚动高度大于等于第i个并且小于第i+1个标题的高度，则激活第i个标题
           return (activeIndex.value = i);
         }
       }
@@ -99,64 +100,40 @@ export default {
     let scrollFunc = function (e) {
       e = e || window.event;
       if (e.wheelDelta) {
-        //判断浏览器IE，谷歌滑轮事件
+        //IE，谷歌浏览器滑轮事件
         if (e.wheelDelta > 0) {
-          //当滑轮向上滚动时
           // console.log("滑轮向上滚动");
           isDown = false;
         }
         if (e.wheelDelta < 0) {
-          //当滑轮向下滚动时
           // console.log("滑轮向下滚动");
           isDown = true;
         }
       } else if (e.detail) {
         //Firefox滑轮事件
         if (e.detail > 0) {
-          //当滑轮向上滚动时
-          isDown = false;
           // console.log("滑轮向上滚动");
+          isDown = false;
         }
         if (e.detail < 0) {
-          //当滑轮向下滚动时
-          isDown = false;
           // console.log("滑轮向下滚动");
+          isDown = false;
         }
       }
     };
     const mouseWheel = () => {
       if (document.addEventListener) {
-        //火狐使用DOMMouseScroll绑定
+        //Firefox
         document.addEventListener("DOMMouseScroll", scrollFunc, false);
       }
-      //其他浏览器直接绑定滚动事件
+      //其他浏览器
       document.addEventListener("mousewheel", scrollFunc);
     };
 
 
     //监视目录滚动
-    const nav = ref(null);
-    let oldValue = 10;
     const watchActive = () => {
-      if (oldValue === activeIndex.value) {
-        return;
-      }
-      let difference = activeIndex.value - oldValue //差值
-      let mid = 440 / 2;  //滚动元素父元素的高度的一半
-      let offsetTop = 40.8 * activeIndex.value; //当前激活元素相对于父元素顶部的距离
-      console.log(activeIndex.value);
-      oldValue = activeIndex.value;
-      if (offsetTop > mid && isDown) {
-        nav.value.scrollBy(0, 40.8 * difference);
-      } else if (offsetTop > mid && !isDown) {
-        nav.value.scrollBy(0, 40.8 * difference);
-      }
-      if (activeIndex.value === 1) {
-        console.log('1122');
-        nav.value.scrollTo({
-          top: 0
-        })
-      }
+      // 暂未实现
     };
 
     onBeforeMount(() => {
@@ -167,7 +144,6 @@ export default {
       // console.log('onMounted');
     });
     onBeforeUpdate(() => {
-      // itemRefs = [];
       // console.log('onBeforeUpdate');
     });
     onUnmounted(() => {
