@@ -275,15 +275,15 @@ export default {
       color: #007fff;
 
       & ::before {
-        content: "";
-        position: absolute;
-        top: 2px;
-        left: 0;
-        margin-top: 7px;
-        width: 4px;
-        height: 16px;
-        background: #1e80ff;
-        border-radius: 0 4px 4px 0;
+        // content: "";
+        // position: absolute;
+        // top: 2px;
+        // left: 0;
+        // margin-top: 7px;
+        // width: 4px;
+        // height: 16px;
+        // background: #1e80ff;
+        // border-radius: 0 4px 4px 0;
       }
     }
   }

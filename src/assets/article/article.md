@@ -17,27 +17,13 @@
 
 安装成功后，基于当前自身兴趣选择角色分类，当前可选择的分类包括：Android、前端、产品、设计、iOS、后端、人工智能、运维、测试。
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0bfa2e1d870942c39cc433215a392cf7~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
-
 ### 3.2 内容浏览
 
 根据自己的喜好浏览稀土掘金当前热门文章、第三方热门内容、沸点内容
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/23c4e35eb08d47c4bacedb6ef174a321~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
-
 ### 3.3 笔记
 
 笔记是由稀土掘金自研的学习辅助小工具，方便用户在浏览技术内容时进行快速记录知识。除3.1入口外，还可以通过3.2的超级搜索打开，通过点击稀土掘金插件icon的菜单，以及在任意网页中选中一段内容出现的气泡、右键等方式
-
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8ba203469d374ec8b4bf9aa74203c7a6~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0e55390dd13444539a84b6f5f65049b7~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
-
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7e1f1e66672e45a4a5242866b2b29410~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
-
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/63bac8e548c54e83a5135f43049e36ae~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
-
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4bd0130867fb4270a6889da43df1e6fd~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
-
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/881b5a43aa3d4f11847fa304c81a62fc~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
 
 ### 3.4 聚合搜索
 
@@ -45,41 +31,29 @@
 
 除此之外通过键盘tab键可以快速进行切换。
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/56139a9cf15c4fa59e48eb728d3a00e7~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
-
 ### 3.5 快捷导航
 
 默认工具模式下，唯一搜索框下部，可根据自己所需设置最多10个快捷导航
-
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fd1a3cd61bc749cbacc6646e7655ef0a~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
 
 ### 3.6 便捷工具
 
 在默认的工具摸下，页面右侧快捷工具版块，可以快速调起常用的提效小工具，当前包括：IP查询、时间戳格式转换、二维码生成器、翻译、笔记等
 
-![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/25bc4ab9a7764a09ac307330c57af49f~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
-
 如在使用中遇到任何问题都可以在此进行反馈[juejin.cn/pin/club/68…](https://juejin.cn/pin/club/6824710202692993037)
 
-### 3.7 转载声明
 作者：青训营官方账号
 链接：https://juejin.cn/post/7091128161663975437
 来源：稀土掘金
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 
-## 4 测试
-
-### 三级标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-正文  
+## 4 其他功能介绍  
 **加粗文字**  
 *斜体文字*   
 ~~删除文字~~  
 > 引用  
 
-## 分割线  
+分割线
+  
 ------
 - [ ] 任务列表
 - [x] 任务列表
@@ -88,7 +62,7 @@
 2. 有序列表
    1. 有序列表  
 
-## 代码块  
+代码块  
 ```python
 print("Hello World")
 print("Long Textttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt")
@@ -109,9 +83,10 @@ print("Long Texttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
 </script>
 ```
 [超链接](https://markdown.com.cn/)  
+图片
 ![图片](https://markdown.com.cn/hero.png)  
 
-## 表格
+表格
 | First Header | Second Header |
 | ------------ | ------------- |
 | Content Cell | Content Cell  |
