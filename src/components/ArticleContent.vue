@@ -29,10 +29,6 @@ import article from "/src/assets/article/article.md?raw";
 import {
   ref,
   onBeforeMount,
-  onMounted,
-  onBeforeUpdate,
-  onUpdated,
-  onBeforeUnmount,
   onUnmounted,
 } from "vue";
 import { getCurrentInstance } from "vue";
@@ -95,42 +91,6 @@ export default {
     };
 
 
-    let isDown = true;
-    //判断滚动方向
-    let scrollFunc = function (e) {
-      e = e || window.event;
-      if (e.wheelDelta) {
-        //IE，谷歌浏览器滑轮事件
-        if (e.wheelDelta > 0) {
-          // console.log("滑轮向上滚动");
-          isDown = false;
-        }
-        if (e.wheelDelta < 0) {
-          // console.log("滑轮向下滚动");
-          isDown = true;
-        }
-      } else if (e.detail) {
-        //Firefox滑轮事件
-        if (e.detail > 0) {
-          // console.log("滑轮向上滚动");
-          isDown = false;
-        }
-        if (e.detail < 0) {
-          // console.log("滑轮向下滚动");
-          isDown = false;
-        }
-      }
-    };
-    const mouseWheel = () => {
-      if (document.addEventListener) {
-        //Firefox
-        document.addEventListener("DOMMouseScroll", scrollFunc, false);
-      }
-      //其他浏览器
-      document.addEventListener("mousewheel", scrollFunc);
-    };
-
-
     //监视目录滚动
     const watchActive = () => {
       // 暂未实现
@@ -139,17 +99,8 @@ export default {
     onBeforeMount(() => {
       scroll();
     });
-    onMounted(() => {
-      mouseWheel();
-      // console.log('onMounted');
-    });
-    onBeforeUpdate(() => {
-      // console.log('onBeforeUpdate');
-    });
     onUnmounted(() => {
       window.removeEventListener("scroll", fun);
-      window.removeEventListener("mousewheel", scrollFunc);
-      window.removeEventListener("DOMMouseScroll", scrollFunc);
     });
   },
   data() {
