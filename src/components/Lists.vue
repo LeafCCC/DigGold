@@ -1,7 +1,7 @@
 <template>
-  <el-row :gutter="20">
-    <el-col :span="12" :offset="4">
-      <div class="grid-content ep-bg-purple-dark">
+  <el-row :gutter="20"  >
+    <el-col :span="10" :offset="5" class="col-white">
+      <div class="grid-content">
         <HomeItem
           v-for="(i, index) in data.content"
           :key="index"
@@ -44,5 +44,10 @@ const scrollHandle = () => {
   border-radius: 4px;
   min-height: 1000px;
   overflow: hidden;
+}
+
+.col-white {
+  background-color: rgb(255, 255, 255);
+  margin-right: 20px;
 }
 </style>
