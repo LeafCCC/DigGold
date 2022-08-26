@@ -19,6 +19,7 @@
 <style lang="scss">
 .sidebar-block.banner-block {
   overflow: hidden;
+  width: 240px;
   .banner {
     height: 200px;
   }

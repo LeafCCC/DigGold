@@ -9,7 +9,7 @@
         />
       </div>
     </el-col>
-    <el-col :span="4" :offset="0"> <Sidebar /></el-col>
+    <Sidebar />
   </el-row>
 </template>
 
