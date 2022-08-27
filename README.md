@@ -3,7 +3,10 @@
 ## 项目说明
 本项目为字节跳动前端青训营项目，使用Vue3 + Vite进行搭建，具体的文档说明为：[https://qturfdqv9y.feishu.cn/docx/doxcnmKAZivJM2y1U3GEnnXgRdf](https://qturfdqv9y.feishu.cn/docx/doxcnmKAZivJM2y1U3GEnnXgRdf)
 
+## 效果展示
 
+首页：
+![图片效果测试](https://github.com/LeafCCC/DigGold/blob/master/src/assets/img/1.jpeg)
 
 ## 项目目录结构
 
@@ -53,17 +56,17 @@ DigGold
 
 首先要安装最新版的 Node.js，安装成功后输入`node -v`与`npm -v`检查安装是否成功，相关具体版本如下：
 
-node --version 16.17.0
+`node --version 16.17.0`
 
-npm --version 8.15.0
+`npm --version 8.15.0`
 
 本项目基础是Vue3 + Vite，此外还使用了[element-plus](https://element-plus.gitee.io/zh-CN/)组件库，相关版本如下：
 
-Vue --version 3.2.37
+`Vue --version 3.2.37`
 
-Vite --version 3.0.9
+`Vite --version 3.0.9`
 
-element-plus --version 2.2.13
+`element-plus --version 2.2.13`
 
 
 ## 安装与使用
