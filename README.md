@@ -5,9 +5,13 @@
 
 ## 效果展示
 
-首页：
-![文章首页](https://ibb.co/7GwSKLB)
+#### 首页：
 
+![首页](https://pic.imgdb.cn/item/63099f6716f2c2beb166be54.png)
+
+#### 文章详细页：
+
+![文章详细页](https://pic.imgdb.cn/item/63099f9016f2c2beb166e002.png)
 ## 项目目录结构
 
 ```
