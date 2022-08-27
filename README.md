@@ -3,11 +3,11 @@
 ## 项目说明
 本项目为字节跳动前端青训营项目，使用Vue3 + Vite进行搭建，具体的文档说明为：[https://qturfdqv9y.feishu.cn/docx/doxcnmKAZivJM2y1U3GEnnXgRdf](https://qturfdqv9y.feishu.cn/docx/doxcnmKAZivJM2y1U3GEnnXgRdf)
 
----
+
 
 ## 项目目录结构
 
-```
+
 DigGold
 │  .eslintcache
 │  .eslintrc.cjs
@@ -48,7 +48,7 @@ DigGold
             Home.vue    // 主页
 ```
 
----
+
 ## 相关依赖
 
 首先要安装最新版的 Node.js，安装成功后输入`node -v`与`npm -v`检查安装是否成功，相关具体版本如下：
@@ -65,7 +65,6 @@ Vite --version 3.0.9
 
 element-plus --version 2.2.13
 
----
 
 ## 安装与使用
 
@@ -96,6 +95,8 @@ pnpm dev
 pnpm build
 ```
 
+
+
 ## 相关资料
 
 Vue3 相关资料汇总：[https://vue3js.cn/](https://vue3js.cn/)
@@ -104,13 +105,8 @@ Vue3 互动教程，一两个小时内了解最基础的操作：[https://stagin
 
 组件库为[ElementPlus](https://element-plus.gitee.io/zh-CN/)
 
----
 
-## 文件说明
 
-views 目录下保存所有页面，如主页`Home.vue`；文章详情页`ArticleDemo.vue`等。components 目录下保存所有组件，如`Navigation.vue`等。
-
----
 
 ## 文章详细页相关
 
