@@ -7,7 +7,7 @@
 
 ## 项目目录结构
 
-
+```
 DigGold
 │  .eslintcache
 │  .eslintrc.cjs
