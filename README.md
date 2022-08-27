@@ -6,7 +6,7 @@
 ## 效果展示
 
 首页：
-![图片效果测试](https://github.com/LeafCCC/DigGold/blob/master/src/assets/img/1.jpeg)
+![文章首页](https://ibb.co/7GwSKLB)
 
 ## 项目目录结构
 
