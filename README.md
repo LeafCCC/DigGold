@@ -3,6 +3,8 @@
 ## 项目说明
 本项目为字节跳动前端青训营项目，使用Vue3 + Vite进行搭建，具体的文档说明为：[https://qturfdqv9y.feishu.cn/docx/doxcnmKAZivJM2y1U3GEnnXgRdf](https://qturfdqv9y.feishu.cn/docx/doxcnmKAZivJM2y1U3GEnnXgRdf)
 
+展示视频为:[https://qturfdqv9y.feishu.cn/docx/doxcnmKAZivJM2y1U3GEnnXgRdf](https://qturfdqv9y.feishu.cn/docx/doxcnmKAZivJM2y1U3GEnnXgRdf)
+
 ## 效果展示
 
 #### 首页：
